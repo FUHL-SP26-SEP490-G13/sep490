@@ -6,12 +6,12 @@ import { createServer } from "http";
 import { initSocket } from "./config/socket.js";
 
 // Import Routes - Start
-
+import app from "./app.js";
 // Import Routes - End
 
-dotenv.config();
+// dotenv.config();
 
-const app = express();
+// const app = express();
 
 // --- Middlewares ---
 const allowedOrigins = [process.env.FRONTEND_ROUTE];
@@ -48,3 +48,8 @@ const PORT = process.env.PORT;
 httpServer.listen(PORT, () =>
   console.log(`🚀 Server running on http://localhost:${PORT}`)
 );
+
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
