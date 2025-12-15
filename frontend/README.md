@@ -1,16 +1,65 @@
-# React + Vite
+# SEP490 Project - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Đây là mã nguồn Frontend cho dự án SEP490, được xây dựng trên nền tảng React và Vite.
 
-Currently, two official plugins are available:
+## Yêu cầu hệ thống
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Node.js](https://nodejs.org/) (Khuyến nghị phiên bản LTS mới nhất)
 
-## React Compiler
+## Hướng dẫn cài đặt
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. **Di chuyển vào thư mục frontend:**
+   ```bash
+   cd frontend
+   ```
 
-## Expanding the ESLint configuration
+2. **Cài đặt các gói thư viện (dependencies):**
+   ```bash
+   npm install
+   ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Cấu hình môi trường (.env)
+
+Tạo một file có tên `.env` tại thư mục gốc của `frontend` để cấu hình các biến môi trường. Lưu ý với Vite, các biến môi trường cần bắt đầu bằng `VITE_`.
+
+Ví dụ mẫu:
+
+```env
+# Đường dẫn API Backend
+VITE_API_URL=http://localhost:5000/api
+
+# Cấu hình Socket.io (nếu cần tách biệt)
+VITE_SOCKET_URL=http://localhost:5000
+```
+
+## Chạy ứng dụng
+
+Để chạy ứng dụng ở chế độ phát triển (Development):
+
+```bash
+npm run dev
+```
+*Ứng dụng sẽ chạy tại địa chỉ thường là `http://localhost:5173`.*
+
+## Danh sách thư viện sử dụng
+
+Dựa trên `package.json`, dưới đây là các thư viện chính và công dụng của chúng trong dự án:
+
+### Core & Build Tool
+- **`react`** (^19.2.0) & **`react-dom`**: Thư viện cốt lõi để xây dựng giao diện người dùng.
+- **`vite`** (^7.2.4): Công cụ build frontend cực nhanh, thay thế cho Webpack.
+
+### UI Components & Styling (Giao diện)
+- **`antd`** (^6.0.0): Ant Design - Thư viện UI Component phổ biến, cung cấp các component dựng sẵn đẹp mắt.
+- **`react-icons`** (^5.5.0): Bộ sưu tập icon đa dạng cho React.
+- **`framer-motion`** (^12.23.25): Thư viện tạo hiệu ứng chuyển động (animation) mượt mà.
+- **`clsx`** (^2.1.1): Tiện ích nhỏ gọn để xử lý class name động có điều kiện.
+
+### State Management & API (Quản lý trạng thái & Kết nối)
+- **`zustand`** (^5.0.9): Thư viện quản lý state toàn cục (Global State Management) nhẹ và đơn giản hơn Redux.
+- **`axios`** (^1.13.2): Thư viện HTTP Client để gọi API tới Backend.
+- **`socket.io-client`** (^4.8.1): Client để kết nối WebSocket với Backend (chat, thông báo realtime).
+
+### Routing & Utilities (Điều hướng & Tiện ích)
+- **`react-router-dom`** (^7.9.6): Quản lý điều hướng (routing) giữa các trang trong ứng dụng SPA.
+- **`dayjs`** (^1.11.19): Thư viện xử lý ngày tháng nhẹ (thay thế cho Moment.js).
