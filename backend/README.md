@@ -60,3 +60,7 @@ Dựa trên `package.json`, dưới đây là các thư viện chính và công 
 
 ### Development Tools
 - **`nodemon`** (^3.1.11): Công cụ hỗ trợ dev, tự động restart server khi file thay đổi.
+
+### Documentation (Tài liệu API)
+- **swagger-ui-express**: Middleware tạo giao diện người dùng (UI) để hiển thị và tương tác với tài liệu API. 
+- **swagger-jsdoc**: Giúp viết tài liệu API ngay trong code bằng JSDoc comments và tự động tạo đặc tả OpenAPI.
