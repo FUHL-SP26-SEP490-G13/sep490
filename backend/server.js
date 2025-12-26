@@ -41,7 +41,10 @@ app.use(express.json());
 
 // --- Sample Route ---
 app.get("/", (req, res) => {
-  res.json({ message: "Server for SEP490 Capstone Project is running" });
+  res.json({
+    message: "Server for SEP490 Capstone Project (branch: main) is running",
+    success: "Connected API successfully",
+  });
 });
 
 // --- API Documentation ---
@@ -50,7 +53,7 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 // --- Start Server ---
 const PORT = process.env.PORT;
 
-httpServer.listen(PORT, () =>{
+httpServer.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
   console.log(`Swagger UI at http://localhost:${PORT}/api-docs`);
 });
