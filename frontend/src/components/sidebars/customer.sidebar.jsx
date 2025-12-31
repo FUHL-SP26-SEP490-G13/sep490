@@ -1,3 +1,4 @@
+// components/AppSidebar.jsx
 import { Layout, Menu, Drawer, Grid } from "antd";
 import {
   DashboardOutlined,
@@ -10,12 +11,12 @@ const { Sider } = Layout;
 const { useBreakpoint } = Grid;
 
 const items = [
-  { key: "/admin", icon: <DashboardOutlined />, label: "Dashboard"},
-  { key: "/admin/users", icon: <UserOutlined />, label: "Users"},
-  { key: "/admin/settings", icon: <SettingOutlined />, label: "Settings"},
+  { key: "/", icon: <DashboardOutlined />, label: "Dashboard" },
+  { key: "/users", icon: <UserOutlined />, label: "Users" },
+  { key: "/settings", icon: <SettingOutlined />, label: "Settings" },
 ];
 
-const AdminSidebar = ({ collapsed, onCloseMobile }) => {
+const CustomerSidebar = ({ collapsed, onCloseMobile }) => {
   const screens = useBreakpoint();
   const isMobile = !screens.md;
 
@@ -28,74 +29,60 @@ const AdminSidebar = ({ collapsed, onCloseMobile }) => {
       mode="inline"
       items={items}
       selectedKeys={[location.pathname]}
-      style={{ borderRight: 0 }}
       onClick={({ key }) => {
         navigate(key);
-        if (isMobile) onCloseMobile?.();
+        if (isMobile) onCloseMobile();
       }}
     />
   );
 
-  /* ===== Mobile: Drawer ===== */
   if (isMobile) {
     return (
       <Drawer
-        placement="left"
         open={!collapsed}
+        placement="left"
         closable={false}
         width={240}
         bodyStyle={{ padding: 0 }}
         onClose={onCloseMobile}
       >
-        {/* Header Drawer */}
         <div
           style={{
             height: 64,
+            color: "#fff",
+            fontSize: 18,
+            fontWeight: 600,
             display: "flex",
             alignItems: "center",
-            padding: "0 16px",
-            fontWeight: 600,
-            fontSize: 18,
+            paddingLeft: 16,
             background: "#001529",
-            color: "#fff",
           }}
         >
           My App
         </div>
-
         {menu}
       </Drawer>
     );
   }
 
-  /* ===== Desktop / Tablet: Sider ===== */
   return (
-    <Sider
-      collapsible
-      collapsed={collapsed}
-      width={240}
-      trigger={null}
-    >
-      {/* Logo / Brand */}
+    <Sider collapsed={collapsed} width={240}>
       <div
         style={{
           height: 64,
+          color: "#fff",
+          fontWeight: 600,
           display: "flex",
           alignItems: "center",
           justifyContent: collapsed ? "center" : "flex-start",
           paddingLeft: collapsed ? 0 : 16,
-          fontWeight: 600,
-          fontSize: 18,
-          color: "#fff",
-          transition: "all 0.2s",
         }}
       >
-        {collapsed ? "A (A)" : "My App (Admin)"}
+        {collapsed ? "A" : "My App"}
       </div>
-
       {menu}
     </Sider>
   );
 };
 
-export default AdminSidebar;
+export default CustomerSidebar;
