@@ -1,7 +1,7 @@
 import { Layout, Button, Grid, Typography } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 import { useState } from "react";
-import AppSidebar from "../sidebars/admin.sidebar.jsx";
+import AdminSidebar from "../sidebars/admin.sidebar.jsx";
 
 const { Header, Content } = Layout;
 const { Title } = Typography;
@@ -15,7 +15,7 @@ const MainLayout = ({ children, title }) => {
 
   return (
     <Layout style={{ minHeight: "100vh" }}>
-      <AppSidebar
+      <AdminSidebar
         collapsed={collapsed}
         onCloseMobile={() => setCollapsed(true)}
       />

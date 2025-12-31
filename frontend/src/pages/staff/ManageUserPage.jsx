@@ -1,9 +1,9 @@
 import { Button, Table } from "antd";
-import MainLayout from "../../components/layout/admin.layout";
+import StaffLayout from "../../components/layout/staff.layout";
 
-const ManageUserPage = () => {
+const StaffManageUserPage = () => {
   return (
-    <MainLayout title="Quản lý người dùng">
+    <StaffLayout title="Quản lý người dùng">
       {/* NOT REMOVE THIS NOTE - Đây là nơi bạn có thể thêm nội dung ở phần bên phải */}
       <h2>Đây là trang sử dụng font Sans Francisco</h2>
       <p>Welcome to the dashboard page.</p>
@@ -35,8 +35,8 @@ const ManageUserPage = () => {
       <Button type="dashed">Dashed</Button>
       <Button type="text">Text</Button>
       <Button type="link">Link</Button>
-    </MainLayout>
+    </StaffLayout>
   );
 };
 
-export default ManageUserPage;
+export default StaffManageUserPage;

@@ -10,12 +10,12 @@ const { Sider } = Layout;
 const { useBreakpoint } = Grid;
 
 const items = [
-  { key: "/admin", icon: <DashboardOutlined />, label: "Dashboard"},
-  { key: "/admin/users", icon: <UserOutlined />, label: "Users"},
-  { key: "/admin/settings", icon: <SettingOutlined />, label: "Settings"},
+  { key: "/staff", icon: <DashboardOutlined />, label: "Dashboard"},
+  { key: "/staff/users", icon: <UserOutlined />, label: "Users"},
+  { key: "/staff/settings", icon: <SettingOutlined />, label: "Settings"},
 ];
 
-const AdminSidebar = ({ collapsed, onCloseMobile }) => {
+const StaffSidebar = ({ collapsed, onCloseMobile }) => {
   const screens = useBreakpoint();
   const isMobile = !screens.md;
 
@@ -90,7 +90,7 @@ const AdminSidebar = ({ collapsed, onCloseMobile }) => {
           transition: "all 0.2s",
         }}
       >
-        {collapsed ? "A (A)" : "My App (Admin)"}
+        {collapsed ? "A (S)" : "My App (Staff)"}
       </div>
 
       {menu}
@@ -98,4 +98,4 @@ const AdminSidebar = ({ collapsed, onCloseMobile }) => {
   );
 };
 
-export default AdminSidebar;
+export default StaffSidebar;

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Button, Table } from "antd";
-import MainLayout from "../../components/layout/admin.layout";
+import StaffLayout from "../../components/layout/staff.layout";
 
-const DashboardPage = () => {
+const StaffDashboardPage = () => {
   const [message, setMessage] = useState("");
   const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
@@ -24,7 +24,7 @@ const DashboardPage = () => {
   }, []);
 
   return (
-    <MainLayout title="Dashboard">
+    <StaffLayout title="Dashboard">
       {/* NOT REMOVE THIS NOTE - Đây là nơi bạn có thể thêm nội dung ở phần bên phải */}
       <h2>Đây là trang sử dụng font Sans Francisco</h2>
       <p>Welcome to the dashboard page.</p>
@@ -82,8 +82,8 @@ const DashboardPage = () => {
       <Button type="dashed">Dashed</Button>
       <Button type="text">Text</Button>
       <Button type="link">Link</Button>
-    </MainLayout>
+    </StaffLayout>
   );
 };
 
-export default DashboardPage;
+export default StaffDashboardPage;

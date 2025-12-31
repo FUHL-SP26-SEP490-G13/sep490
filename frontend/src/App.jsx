@@ -4,6 +4,9 @@ import { ConfigProvider } from "antd";
 // Pages
 import DashboardPage from "./pages/admin/DashboardPage";
 import ManageUserPage from "./pages/admin/ManageUserPage";
+import StaffDashboardPage from "./pages/staff/DashboardPage";
+import StaffManageUserPage from "./pages/staff/ManageUserPage";
+import CustomerDashboard from "./pages/customer/DashboardPage";
 
 const theme = {
   token: {
@@ -17,8 +20,11 @@ function App() {
     <ConfigProvider theme={theme}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<DashboardPage />} />
-          <Route path="/users" element={<ManageUserPage />} />
+          <Route path="/" element={<CustomerDashboard />} />
+          <Route path="/admin" element={<DashboardPage />} />
+          <Route path="/admin/users" element={<ManageUserPage />} />
+          <Route path="/staff" element={<StaffDashboardPage />} />
+          <Route path="/staff/users" element={<StaffManageUserPage />} />
         </Routes>
       </BrowserRouter>
     </ConfigProvider>
