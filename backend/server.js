@@ -3,9 +3,12 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import swaggerUi from "swagger-ui-express";
-import swaggerSpec from "./config/swagger.js";
 import { createServer } from "http";
+
+// --- Import Configurations ---
+import swaggerSpec from "./config/swagger.js";
 import { initSocket } from "./config/socket.js";
+import { connectDB, createServer, sequelize } from "./config/db.js";
 
 // Import Routes - Start
 
@@ -14,6 +17,8 @@ import { initSocket } from "./config/socket.js";
 dotenv.config();
 
 const app = express();
+
+connectDB();
 
 // --- Middlewares ---
 const allowedOrigins = [process.env.FRONTEND_ROUTE];
