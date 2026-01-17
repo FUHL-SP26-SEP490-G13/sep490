@@ -1,11 +1,11 @@
-# [Tên đề tài]
+# COFFEE SHOP MANAGEMENT SYSTEM
 
 ## I. Giới thiệu
 
 ### 1. Thông tin đồ án
 
-- Tên dự án (Tiếng Việt): 
-- Tên dự án (Tiếng Anh):
+- Tên dự án (Tiếng Việt): **HỆ THỐNG QUẢN LÝ QUÁN CÀ PHÊ**
+- Tên dự án (Tiếng Anh): **COFFEE SHOP MANAGEMENT SYSTEM**
 - Nhóm thực hiện: **SEP490 - Nhóm 13**
 
 ### 2. Thành viên nhóm
