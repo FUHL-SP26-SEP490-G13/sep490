@@ -3,7 +3,7 @@ import swaggerJSDoc from "swagger-jsdoc";
 const swaggerDefinition = {
   openapi: "3.0.0",
   info: {
-    title: "Backend API for SEP490 Capstone Project (Branch: Main)",
+    title: "Backend API for SEP490 Capstone Project (Branch: develop)",
     description: "Tester: Chu The Van - HE170807",
     version: "1.0.0",
   },

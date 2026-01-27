@@ -40,6 +40,8 @@ Dựa trên `package.json`, dưới đây là các thư viện chính và công 
 - **`express`** (^5.1.0): Framework web mạnh mẽ để xây dựng RESTful API.
 - **`cors`** (^2.8.5): Middleware xử lý Cross-Origin Resource Sharing, cho phép frontend gọi API.
 - **`dotenv`** (^17.2.3): Quản lý biến môi trường từ file `.env`.
+- **`morgan`** (^1.10.1): Middleware ghi log (logger) cho các HTTP request, giúp debug dễ dàng hơn.
+- **`express-validator`** (^7.3.1): Middleware dùng để kiểm tra (validate) và làm sạch dữ liệu đầu vào từ request.
 
 ### Database (Cơ sở dữ liệu)
 - **`sequelize`** (^6.37.1): ORM (Object-Relational Mapper) giúp thao tác với database bằng code JavaScript thay vì SQL thuần.
@@ -58,8 +60,11 @@ Dựa trên `package.json`, dưới đây là các thư viện chính và công 
 - **`socket.io`** (^4.8.1): Hỗ trợ giao tiếp thời gian thực hai chiều (WebSocket), dùng cho chat hoặc thông báo.
 - **`nodemailer`** (^7.0.10): Thư viện gửi email (xác thực tài khoản, quên mật khẩu...).
 
-### Development Tools
+### Development Tools & Testing
 - **`nodemon`** (^3.1.11): Công cụ hỗ trợ dev, tự động restart server khi file thay đổi.
+- **`jest`** (^30.2.0): Framework kiểm thử (Unit Test/Integration Test) phổ biến cho JavaScript.
+- **`supertest`** (^7.1.4): Thư viện hỗ trợ test HTTP request cho Express (thường dùng chung với Jest).
+- **`cross-env`** (^10.1.0): Hỗ trợ thiết lập biến môi trường (như `NODE_ENV`) đồng nhất trên các hệ điều hành khác nhau (Windows/Linux/Mac).
 
 ### Documentation (Tài liệu API)
 - **`swagger-ui-express`**: Middleware tạo giao diện người dùng (UI) để hiển thị và tương tác với tài liệu API. 

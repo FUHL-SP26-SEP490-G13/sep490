@@ -12,12 +12,12 @@ import { connectDB, sequelize } from "./config/db.js";
 import { payOS } from "./config/payOS.js";
 
 // Import Routes - Start
-
+import app from "./app.js";
 // Import Routes - End
 
-dotenv.config();
+// dotenv.config();
 
-const app = express();
+// const app = express();
 
 connectDB();
 
@@ -48,7 +48,7 @@ app.use(express.json());
 // --- Sample Route ---
 app.get("/", (req, res) => {
   res.json({
-    message: "Server for SEP490 Capstone Project (branch: main) is running",
+    message: "Server for SEP490 Capstone Project (branch: develop) is running",
     success: "Connected API successfully",
   });
 });
