@@ -32,6 +32,11 @@ npm start
 ```
 *Lệnh này sẽ chạy `nodemon server.js` như đã định nghĩa trong `package.json`.*
 
+Để chạy server ở chế độ Kiểm thử (Testing), ta nhập:
+```bash
+npm test
+```
+
 ## Danh sách thư viện sử dụng
 
 Dựa trên `package.json`, dưới đây là các thư viện chính và công dụng của chúng trong dự án:
